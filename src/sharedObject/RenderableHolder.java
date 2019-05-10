@@ -167,7 +167,10 @@ public class RenderableHolder {
 
 	private static Font fontLoader(String path, double size) throws LoadUnableException {
 		try {
-			return Font.loadFont(ClassLoader.getSystemResource(path).toString(), size);
+			System.out.println(ClassLoader.getSystemResource(path).toString());
+			Font ret = Font.loadFont("file:/C:/Users/USER/Desktop/Prog Meth/ASDF/bin/font/Astrobia.ttf", size);
+			System.out.println(ret);
+			return ret;
 		} catch (Exception e) {
 			throw new LoadUnableException(path);
 		}
