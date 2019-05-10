@@ -91,7 +91,7 @@ public class RenderableHolder {
 		coin = imageLoader("items/coin.gif");
 		gem = imageLoader("items/gem.gif");
 
-		bgm = mediaPlayerLoader("song/GameScreen.mp3");
+		bgm = mediaPlayerLoader("song/megalovania_intro.mp3");
 		fireBall = audioClipLoader("song/Fire_Ball.mp3");
 		laser = audioClipLoader("song/laser.wav");
 		hit = audioClipLoader("song/hit.wav");
@@ -112,7 +112,7 @@ public class RenderableHolder {
 
 		hits = new AudioClip[] { hit, hit2 };
 		explosions = new AudioClip[] { explosion, explosion2 };
-
+		System.out.println("Loaded");
 		inGameFont = fontLoader("font/Astrobia.ttf", 40);
 		inGameFontSmall = fontLoader("font/Astrobia.ttf", 22.5);
 		titleFont = fontLoader("font/Astrobia.ttf", 70);

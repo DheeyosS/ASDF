@@ -14,7 +14,7 @@ public class BackgroundMusic {
 			@Override
 			protected Object call() throws Exception {
 				bgm = RenderableHolder.bgm;
-				bgm.setVolume(0.6);
+				bgm.setVolume(10);
 				bgm.setCycleCount(MediaPlayer.INDEFINITE);
 				bgm.play();
 				return null;
