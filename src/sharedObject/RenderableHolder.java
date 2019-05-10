@@ -46,13 +46,13 @@ public class RenderableHolder {
 
 	public static void loadResource() throws LoadUnableException {
 
-		ship = imageLoader("player/Ship50.gif");
+		ship = imageLoader("player/Balloon.png");
 
 		eSemiBoss = imageLoader("enemy/semiboss.gif");
-		eBoss = imageLoader("enemy/BigBoss.gif");
+		eBoss = imageLoader("enemy/Duck.gif");
 		eScout = imageLoader("enemy/Extra.gif");
-		eLight = imageLoader("enemy/Light.png");
-		eJet = imageLoader("enemy/eJet.gif");
+		eLight = imageLoader("enemy/Cat3.gif");
+		eJet = imageLoader("enemy/Bananaa.gif");
 		eHeavy = imageLoader("enemy/Heavy.gif");
 
 		exploArr = new Image[12];
@@ -78,18 +78,16 @@ public class RenderableHolder {
 		beamSmallG = imageLoader("bullet/beamSmallG.png");
 		beamSmallY = imageLoader("bullet/beamSmallY.png");
 
-		background = imageLoader("background/Space8bit (2).png");
-		backgroundMM = imageLoader("background/DarkSpace.jpg");
-		backgroundW = imageLoader("background/Notebook.jpg");
+		background = imageLoader("background/SkyWide.jpg");
+		backgroundMM = imageLoader("background/SkyWide.jpg");
+		backgroundW = imageLoader("background/SkyWide.jpg");
 
 		attackBox = imageLoader("items/attackbox.gif");
-		triplefirebox = imageLoader("items/triple.png");
-		powerattackBox = imageLoader("items/SUPERPOWER.png");
+		triplefirebox = imageLoader("items/Triple2.gif");
+		powerattackBox = imageLoader("items/PowerAttack2.gif");
 		healthpack = imageLoader("items/health.png");
 		shieldmax = imageLoader("items/shieldmax.gif");
 		shieldregen = imageLoader("items/shieldregen.gif");
-		coin = imageLoader("items/coin.gif");
-		gem = imageLoader("items/gem.gif");
 
 		bgm = mediaPlayerLoader("song/megalovania_intro.mp3");
 		fireBall = audioClipLoader("song/Fire_Ball.mp3");
@@ -112,12 +110,12 @@ public class RenderableHolder {
 
 		hits = new AudioClip[] { hit, hit2 };
 		explosions = new AudioClip[] { explosion, explosion2 };
-		System.out.println("Loaded");
-		inGameFont = fontLoader("font/Astrobia.ttf", 40);
-		inGameFontSmall = fontLoader("font/Astrobia.ttf", 22.5);
-		titleFont = fontLoader("font/Astrobia.ttf", 70);
-		menuFont = fontLoader("font/Astrobia.ttf", 35);
-		tutorialFont = fontLoader("font/Astrobia.ttf", 22);
+		
+		inGameFont = fontLoader("font/Pusab.ttf", 30);
+		inGameFontSmall = fontLoader("font/Pusab.ttf", 15);
+		titleFont = fontLoader("font/Pusab.ttf", 70);
+		menuFont = fontLoader("font/Pusab.ttf", 35);
+		tutorialFont = fontLoader("font/Pusab.ttf", 18);
 
 	}
 
@@ -167,10 +165,7 @@ public class RenderableHolder {
 
 	private static Font fontLoader(String path, double size) throws LoadUnableException {
 		try {
-			System.out.println(ClassLoader.getSystemResource(path).toString());
-			Font ret = Font.loadFont("file:/C:/Users/USER/Desktop/Prog Meth/ASDF/bin/font/Astrobia.ttf", size);
-			System.out.println(ret);
-			return ret;
+			return Font.loadFont(ClassLoader.getSystemResource(path).toString(), size);
 		} catch (Exception e) {
 			throw new LoadUnableException(path);
 		}

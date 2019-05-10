@@ -17,7 +17,7 @@ public class Main extends Application {
 			SceneManager.initialize(primaryStage);
 			SceneManager.gotoMainMenu();
 			primaryStage.getIcons().add(new Image("Icon/Ship50.gif"));
-			primaryStage.setTitle("Falcon B");
+			primaryStage.setTitle("Dank Dream");
 			primaryStage.setAlwaysOnTop(true);
 			primaryStage.centerOnScreen();
 			primaryStage.setResizable(false);

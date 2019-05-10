@@ -33,7 +33,7 @@ public class GameOverScreen extends Canvas {
 		gc.fillText("GAME OVER", SceneManager.SCENE_WIDTH / 2, SceneManager.SCENE_HEIGHT / 4);
 		gc.setFont(Distance_FONT);
 		gc.setFill(Color.RED);
-		String distance = "Your survived " + Distance.distance + " ly";
+		String distance = "Your distance is " + Distance.distance + " Miles";
 		gc.fillText(distance, SceneManager.SCENE_WIDTH / 2, SceneManager.SCENE_HEIGHT * 2 / 4);
 		gc.setFill(Color.RED);
 		gc.fillText("Press Enter to retry", SceneManager.SCENE_WIDTH / 2, SceneManager.SCENE_HEIGHT * 3 / 4);

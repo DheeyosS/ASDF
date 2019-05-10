@@ -34,12 +34,12 @@ public class MainMenu extends Canvas {
 		GraphicsContext gc = this.getGraphicsContext2D();
 		gc.drawImage(RenderableHolder.backgroundMM, 0, 0, SceneManager.SCENE_WIDTH, SceneManager.SCENE_HEIGHT);
 		gc.setTextAlign(TextAlignment.CENTER);
-		gc.setFill(Color.BLUE);
+		gc.setFill(Color.DARKBLUE);
 		gc.setFont(TITLE_FONT);
-		gc.fillText("SPACEBOUND", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT/3);
+		gc.fillText("Ballooney", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT/3);
 		gc.setFont(MENU_FONT);
 		gc.fillText("Press Enter to Start", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT * 3 / 4 );
-		gc.setFill(Color.DARKBLUE);
+		gc.setFill(Color.DARKRED);
 		gc.setFont(TUTORIAL_FONT);
 		gc.fillText("Press Spacebar For Tutorial", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT * 5 / 6 + 80);
 		this.addKeyEventHandler();
@@ -51,7 +51,7 @@ public class MainMenu extends Canvas {
 		GraphicsContext gc = this.getGraphicsContext2D();
 		gc.drawImage(RenderableHolder.backgroundMM, 0, 0, SceneManager.SCENE_WIDTH, SceneManager.SCENE_HEIGHT);
 		gc.setTextAlign(TextAlignment.CENTER);
-		gc.setFill(Color.BLUE);
+		gc.setFill(Color.DARKRED);
 		gc.setFont(TUTORIAL_FONT);
 		gc.fillText("Use Arrow Keys to Move", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT * 1 / 10);
 		gc.fillText("Press Spacebar to Shoot", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT * 1 / 10 + 50);
@@ -63,7 +63,7 @@ public class MainMenu extends Canvas {
 		gc.fillText("Powerups", SceneManager.SCENE_WIDTH/2, SceneManager.SCENE_HEIGHT * 1 / 9 + 200);
 		gc.setTextAlign(TextAlignment.LEFT);
 		gc.setFont(TUTORIAL_FONT);
-		gc.setFill(Color.ROYALBLUE);
+		gc.setFill(Color.DARKRED);
 		gc.drawImage(RenderableHolder.attackBox, SceneManager.SCENE_WIDTH/7, SceneManager.SCENE_HEIGHT * 1 / 9 + 245, 40 ,40);
 		gc.fillText("Increases Firepower", SceneManager.SCENE_WIDTH * 0.3, SceneManager.SCENE_HEIGHT * 1 / 9 + 270);
 		

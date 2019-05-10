@@ -32,8 +32,8 @@ public class Distance implements IRenderable {
 	public void draw(GraphicsContext gc) {
 		// TODO Auto-generated method stub
 		gc.setFont(RenderableHolder.inGameFont);
-		gc.setFill(Color.GOLD);
-		String distanceDisplay = "Distance: " + Integer.toString(Distance.distance) + " ly";
+		gc.setFill(Color.DARKBLUE);
+		String distanceDisplay = "Distance: " + Integer.toString(Distance.distance) + " Miles";
 		FontLoader fontLoader = Toolkit.getToolkit().getFontLoader();
 		double score_width = fontLoader.computeStringWidth(distanceDisplay, gc.getFont());
 		double score_height = fontLoader.getFontMetrics(RenderableHolder.inGameFont).getLineHeight();

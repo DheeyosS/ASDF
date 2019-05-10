@@ -140,19 +140,19 @@ public class Player extends Unit implements IRenderable {
 		gc.setFont(RenderableHolder.inGameFontSmall);
 		FontLoader fontLoader = Toolkit.getToolkit().getFontLoader();
 		
-		gc.setFill(Color.RED);
+		gc.setFill(Color.DARKRED);
 		String atkLevelDisplay = "Firepower Level : " + Integer.toString(Player.atkLvl);
 		double atkLevelDisplay_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall)
 				.getLineHeight();
 		gc.fillText(atkLevelDisplay, 10, 10 + atkLevelDisplay_height);
 		
-		gc.setFill(Color.DODGERBLUE);
+		gc.setFill(Color.DARKGREEN);
 		String shieldLevelDisplay = "Shield Level : " + Integer.toString(this.shieldLvl);
 		double shieldLevelDisplay_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall)
 				.getLineHeight();
 		gc.fillText(shieldLevelDisplay, 10, 32 + shieldLevelDisplay_height);
 		
-		gc.setFill(Color.MEDIUMSEAGREEN);
+		gc.setFill(Color.DARKMAGENTA);
 		String regenLevelDisplay = "Regen Level : " + Integer.toString(this.regenLvl);
 		double regenLevelDisplay_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall)
 				.getLineHeight();
@@ -160,7 +160,7 @@ public class Player extends Unit implements IRenderable {
 		
 		if (powerAttack > 0 && fireMode == 1) {
 			
-			gc.setFill(Color.DARKORANGE);
+			gc.setFill(Color.DARKOLIVEGREEN);
 			String remainPowerAttack = "Power Attack: " + Integer.toString(this.powerAttack);
 			double remainPowerAttack_height = fontLoader.getFontMetrics(RenderableHolder.inGameFontSmall)
 					.getLineHeight();
