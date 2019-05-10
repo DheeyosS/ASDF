@@ -9,7 +9,7 @@ public class Background implements IRenderable {
 
 	private Image bgImage = null;
 	private double currentY;
-	private int screenHeight = 1920;
+	private int screenHeight = 1080;
 	private double scrollSpeed = 2.1;
 	private double scrollModifier = 1;
 

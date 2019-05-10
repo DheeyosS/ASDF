@@ -3,6 +3,7 @@ package application;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import sharedObject.RenderableHolder;
@@ -15,7 +16,8 @@ public class Main extends Application {
 			RenderableHolder.loadResource();
 			SceneManager.initialize(primaryStage);
 			SceneManager.gotoMainMenu();
-			primaryStage.setTitle("SpaceBound");
+			primaryStage.getIcons().add(new Image("Icon/SpaceshipSprite.png"));
+			primaryStage.setTitle("Falcon X");
 			primaryStage.setAlwaysOnTop(true);
 			primaryStage.centerOnScreen();
 			primaryStage.setResizable(false);
@@ -38,4 +40,3 @@ public class Main extends Application {
 		launch(args);
 	}
 }
-

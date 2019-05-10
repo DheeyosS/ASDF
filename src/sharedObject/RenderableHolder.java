@@ -19,8 +19,8 @@ public class RenderableHolder {
 
 	public static Image ship, eSemiBoss, eBoss, eScout, eJet, eHeavy, eLight, bullet, background, backgroundMM,
 			backgroundW, healthpack, bossBullet, bossPower, bossLow, roundBulletB, roundBulletY, roundBulletR,
-			roundBulletP, beamSmallG, beamSmallY, sparkArr[], powerAttack, exploArr[], shieldmax,
-			shieldregen, attackBox, triplefirebox, powerattackBox, coin, gem;
+			roundBulletP, beamSmallG, beamSmallY, sparkArr[], powerAttack, exploArr[], shieldmax, shieldregen,
+			attackBox, triplefirebox, powerattackBox, coin, gem;
 
 	public static Font inGameFont, inGameFontSmall, titleFont, menuFont, tutorialFont;
 
@@ -77,9 +77,9 @@ public class RenderableHolder {
 		roundBulletP = imageLoader("bullet/roundBulletP.png");
 		beamSmallG = imageLoader("bullet/beamSmallG.png");
 		beamSmallY = imageLoader("bullet/beamSmallY.png");
-		
-		background = imageLoader("background/Space8bit.png");
-		backgroundMM = imageLoader("background/CartoonSpace.jpg");
+
+		background = imageLoader("background/Space8bit (2).png");
+		backgroundMM = imageLoader("background/DarkSpace.jpg");
 		backgroundW = imageLoader("background/Notebook.jpg");
 
 		attackBox = imageLoader("items/attackbox.gif");
@@ -94,11 +94,11 @@ public class RenderableHolder {
 		bgm = mediaPlayerLoader("song/GameScreen.mp3");
 		fireBall = audioClipLoader("song/Fire_Ball.mp3");
 		laser = audioClipLoader("song/laser.wav");
-		hit =  audioClipLoader("song/hit.wav");
-		hit2 =  audioClipLoader("song/hit2.wav");
+		hit = audioClipLoader("song/hit.wav");
+		hit2 = audioClipLoader("song/hit2.wav");
 		gameWinnerMusic = mediaPlayerLoader("song/GameWinner.mp3");
 		gameOverMusic = mediaPlayerLoader("song/GameLoser.mp3");
-		mainMenuMusic = mediaPlayerLoader("song/MenuSound.mp3");
+		mainMenuMusic = mediaPlayerLoader("song/Newdawn.mp3");
 		explosion = audioClipLoader("song/Explosion.wav");
 		explosion2 = audioClipLoader("song/Explosion2.wav");
 		powerAttackLaunch = audioClipLoader("song/PowerAttack.mp3");
@@ -110,7 +110,7 @@ public class RenderableHolder {
 		explosion.setVolume(0.25);
 		explosion2.setVolume(0.4);
 
-		hits = new AudioClip[] { hit,hit2 };
+		hits = new AudioClip[] { hit, hit2 };
 		explosions = new AudioClip[] { explosion, explosion2 };
 
 		inGameFont = fontLoader("font/Astrobia.ttf", 40);
@@ -118,7 +118,7 @@ public class RenderableHolder {
 		titleFont = fontLoader("font/Astrobia.ttf", 70);
 		menuFont = fontLoader("font/Astrobia.ttf", 35);
 		tutorialFont = fontLoader("font/Astrobia.ttf", 22);
-		
+
 	}
 
 	public void add(IRenderable entity) {
