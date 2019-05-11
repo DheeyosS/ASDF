@@ -309,19 +309,19 @@ public class Player extends Unit implements IRenderable {
 				this.hp = this.maxHp;
 			}
 		}
-		if (other instanceof ITripleFireBox) {
+		if (other instanceof ITripleFireCat) {
 			this.fireMode = 1;
 			this.TripleFireTimeOut = System.nanoTime() + 8000000000l;
 		}
-		if (other instanceof IPowerAttackBox) {
+		if (other instanceof IPowerAttackCat) {
 			powerAttack++;
 			if(powerAttack > 3) {
 				powerAttack = 3;
 			}
 		}
-		if (other instanceof IShieldMaxBox) {
-			this.maxShield += ((IShieldMaxBox) other).getShieldStorage();
-			this.shield += ((IShieldMaxBox) other).getShieldStorage();
+		if (other instanceof IShieldMaxCat) {
+			this.maxShield += ((IShieldMaxCat) other).getShieldStorage();
+			this.shield += ((IShieldMaxCat) other).getShieldStorage();
 			shieldLvl++;
 			if(shieldLvl > 5) {
 				shieldLvl = 5;
@@ -331,7 +331,7 @@ public class Player extends Unit implements IRenderable {
 				}
 			}
 		}
-		if (other instanceof IShieldRegenBox) {
+		if (other instanceof IShieldRegenBall) {
 			regenLvl++;
 			if(regenLvl > 5) {
 				regenLvl = 5;
@@ -341,7 +341,7 @@ public class Player extends Unit implements IRenderable {
 				}
 			}
 		}
-		if (other instanceof IAttackBox) {
+		if (other instanceof IAttackCat) {
 			atkLvl++;
 			if(atkLvl > 5) {
 				atkLvl = 5;

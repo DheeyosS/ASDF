@@ -38,7 +38,7 @@ public class GameLogic {
 	private boolean isGameRunning;
 
 	private Player player;
-	private ESemiBoss esemi;
+	private EErrorCat eErrorCat;
 	private EBoss eboss;
 
 	public GameLogic(GameScreen canvas) {
@@ -119,10 +119,10 @@ public class GameLogic {
 			nextItemsSpawnTime = System.nanoTime() + 11000000000l;
 
 			addNewObject(
-					new IShieldMaxBox((SceneManager.SCENE_WIDTH - RenderableHolder.shieldmax.getWidth()) / 2 - 100));
-			addNewObject(new IAttackBox((SceneManager.SCENE_WIDTH - RenderableHolder.attackBox.getWidth()) / 2));
-			addNewObject(new IShieldRegenBox(
-					(SceneManager.SCENE_WIDTH - RenderableHolder.shieldregen.getWidth()) / 2 + 100));
+					new IShieldMaxCat((SceneManager.SCENE_WIDTH - RenderableHolder.shieldmaxCat.getWidth()) / 2 - 100));
+			addNewObject(new IAttackCat((SceneManager.SCENE_WIDTH - RenderableHolder.attackCat.getWidth()) / 2));
+			addNewObject(new IShieldRegenBall(
+					(SceneManager.SCENE_WIDTH - RenderableHolder.shieldregenBall.getWidth()) / 2 + 100));
 
 			killedSemi = false;
 		}
@@ -185,9 +185,9 @@ public class GameLogic {
 		this.maxEnemyCap = 6 + stageLevel * 0.85;
 
 		if (Distance.distance >= 5000 && !isSemiAlive) {
-			esemi = new ESemiBoss(this);
-			addNewObject(esemi);
-			GameLogic.currentEnemyWeight += esemi.getWeight();
+			eErrorCat = new EErrorCat(this);
+			addNewObject(eErrorCat);
+			GameLogic.currentEnemyWeight += eErrorCat.getWeight();
 		}
 		if (Distance.distance >= 50000 && !isBossAlive) {
 			eboss = new EBoss(this);
@@ -206,16 +206,16 @@ public class GameLogic {
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eCat.getWidth()));
 				addNewObject(elight);
 			} else if (chance < 75) {
-				EUFO ejet = new EUFO(this, ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eUFO.getWidth()));
+				EBatEye ejet = new EBatEye(this, ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eBatEye.getWidth()));
 				addNewObject(ejet);
 			} else if (chance < 90) {
-				EScout escout = new EScout(this, ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eScout.getWidth()));
+				EUFO escout = new EUFO(this, ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eUFO.getWidth()));
 				addNewObject(escout);
 			} else {
-				EHeavy eheavy = new EHeavy(this, ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eHeavy.getWidth()));
+				EFlyingEye eheavy = new EFlyingEye(this, ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eFlyingEye.getWidth()));
 				addNewObject(eheavy);
 			}
 
@@ -230,20 +230,20 @@ public class GameLogic {
 
 			double rand = ThreadLocalRandom.current().nextDouble(100);
 			if (rand <= 10) {
-				addNewObject(new IAttackBox(ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.attackBox.getWidth())));
+				addNewObject(new IAttackCat(ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.attackCat.getWidth())));
 			} else if (rand <= 30) {
-				addNewObject(new ITripleFireBox(ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.triplefirebox.getWidth())));
+				addNewObject(new ITripleFireCat(ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.triplefireCat.getWidth())));
 			} else if (rand <= 50) {
-				addNewObject(new IPowerAttackBox(ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.powerattackBox.getWidth())));
+				addNewObject(new IPowerAttackCat(ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.powerattackCat.getWidth())));
 			} else if (rand <= 60) {
-				addNewObject(new IShieldMaxBox(ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.shieldmax.getWidth())));
+				addNewObject(new IShieldMaxCat(ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.shieldmaxCat.getWidth())));
 			} else if (rand <= 70) {
-				addNewObject(new IShieldRegenBox(ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.shieldregen.getWidth())));
+				addNewObject(new IShieldRegenBall(ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.shieldregenBall.getWidth())));
 			} else {
 				addNewObject(new IHPBox(ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.healthpack.getWidth())));

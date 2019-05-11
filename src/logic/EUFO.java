@@ -4,82 +4,74 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
-import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import sharedObject.RenderableHolder;
 import window.SceneManager;
 
 public class EUFO extends Enemy {
-
 	private int bulletDelayTick = 0;
-	private double yMultiplier;
 	private GameLogic gameLogic;
-	private boolean inPosition;
+	private double startingX;
 
 	public EUFO(GameLogic gameLogic, double x) {
-		super(100, 0.3);
+		super(250, 1);
+		// TODO Auto-generated constructor stub
 		this.width = RenderableHolder.eUFO.getWidth();
 		this.height = RenderableHolder.eUFO.getHeight();
 		this.visible = true;
 		this.destroyed = false;
 		this.x = x;
+		this.startingX = x;
 		this.y = -this.height;
-		this.collideDamage = 80;
-		this.weight = 2;
+		this.collideDamage = 15;
+		this.weight = 2.5;
 		this.gameLogic = gameLogic;
-		this.yMultiplier = ThreadLocalRandom.current().nextDouble(0.6, 0.9);
-		this.inPosition = false;
+	}
+
+	@Override
+	public void draw(GraphicsContext gc) {
+		// TODO Auto-generated method stub
+		gc.drawImage(RenderableHolder.eUFO, x, y);
+		if(collided) {
+			Image spark = RenderableHolder.sparkArr[ThreadLocalRandom.current().nextInt(0,4)];
+			gc.drawImage(spark, x + this.width/6, y + this.width/4, this.width * 0.7, this.height * 0.7);
+			collided = false;
+		}
+	}
+
+	@Override
+	public Shape getBoundary() {
+		// TODO Auto-generated method stub
+		Rectangle bound = new Rectangle();
+		bound.setX(x);
+		bound.setY(y);
+		bound.setWidth(width);
+		bound.setHeight(height);
+		return bound;
 	}
 
 	@Override
 	public void update() {
 		// TODO Auto-generated method stub
-
-		if (this.y <= SceneManager.SCENE_HEIGHT * this.yMultiplier) {
-			this.y += (SceneManager.SCENE_HEIGHT * this.yMultiplier - y) / Math.sqrt(SceneManager.SCENE_HEIGHT);
-		}
-		else {
-			this.inPosition = true;
-		}
-		this.y += this.speed;
+		long now = System.nanoTime();
+		this.x = Math.sin(1.1 * now * 1e-9 + Math.toRadians(90) + startingX/SceneManager.SCENE_WIDTH * 180) * ((SceneManager.SCENE_WIDTH - this.width) / 2)
+				+ (SceneManager.SCENE_WIDTH - this.width) / 2.0;
+		y += this.speed;
 		if (this.isOutOfScreen()) {
 			this.visible = false;
 			this.destroyed = true;
 		}
-		if (inPosition) {
-			if (bulletDelayTick % 25 == 0) {
-				gameLogic.addPendingBullet(new Bullet(x, y - this.height / 2, 15, 0, -1, 10, this));
-				gameLogic.addPendingBullet(new Bullet(x, y - this.height / 2, -15, 0, -1, 10, this));
-				RenderableHolder.laser.play();
-			}
-			bulletDelayTick++;
+		if (bulletDelayTick % 30 == 0) {
+			gameLogic.addPendingBullet(new Bullet(x, y - this.height / 2, -5, 10, -1, 2, this));
+			gameLogic.addPendingBullet(new Bullet(x, y - this.height / 2, 5, 10, -1, 2, this));
+			RenderableHolder.fireBall.play();
 		}
-
-	}
-
-	@Override
-	public void draw(GraphicsContext gc) {
-		// TODO Auto-generated method stub	
-		gc.drawImage(RenderableHolder.eUFO, x, y);
-		if(collided) {
-			Image spark = RenderableHolder.sparkArr[ThreadLocalRandom.current().nextInt(0,4)];
-			gc.drawImage(spark, x - 5, y, this.width, this.height);
-			collided = false;
-		}
-	}
-
-
-	@Override
-	public Shape getBoundary() {
-		// TODO Auto-generated method stub
-		Circle bound = new Circle();
-		bound.setCenterX(x + width / 2);
-		bound.setCenterY(y + width / 2);
-		bound.setRadius(width / 2);
-		return bound;
+		bulletDelayTick++;
 	}
 
 	public double getWeight() {
 		return weight;
 	}
+
 }

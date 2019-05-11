@@ -5,13 +5,13 @@ import java.util.concurrent.ThreadLocalRandom;
 import javafx.scene.canvas.GraphicsContext;
 import sharedObject.RenderableHolder;
 
-public class ITripleFireBox extends Items {
-
-	public ITripleFireBox(double x) {
-		// TODO Auto-generated constructor stub
-		super(ThreadLocalRandom.current().nextDouble(3, 6));
-		this.width = RenderableHolder.triplefirebox.getWidth();
-		this.height = RenderableHolder.triplefirebox.getHeight();
+public class IShieldMaxCat extends Items {
+	private final int shieldStorage = 200;
+	
+	public IShieldMaxCat(double x) {
+		super(3);
+		this.width = RenderableHolder.shieldmaxCat.getWidth();
+		this.height = RenderableHolder.shieldmaxCat.getHeight();
 		this.visible = true;
 		this.destroyed = false;
 		this.x = x;
@@ -22,15 +22,19 @@ public class ITripleFireBox extends Items {
 	@Override
 	public void draw(GraphicsContext gc) {
 		// TODO Auto-generated method stub
-		gc.drawImage(RenderableHolder.triplefirebox, x, y);
+		gc.drawImage(RenderableHolder.shieldmaxCat, x, y);
 	}
 
 	@Override
-	public void onCollision(Unit others) {
+	public void onCollision(Unit other) {
 		// TODO Auto-generated method stub
 		this.hp = 0;
 		this.destroyed = true;
 		this.visible = false;
 	}
 
+	public int getShieldStorage() {
+		return shieldStorage;
+	}
+	
 }

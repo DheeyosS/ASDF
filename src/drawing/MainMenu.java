@@ -64,23 +64,23 @@ public class MainMenu extends Canvas {
 		gc.setTextAlign(TextAlignment.LEFT);
 		gc.setFont(TUTORIAL_FONT);
 		gc.setFill(Color.DARKRED);
-		gc.drawImage(RenderableHolder.attackBox, SceneManager.SCENE_WIDTH/7, SceneManager.SCENE_HEIGHT * 1 / 9 + 245, 40 ,40);
+		gc.drawImage(RenderableHolder.attackCat, SceneManager.SCENE_WIDTH/7, SceneManager.SCENE_HEIGHT * 1 / 9 + 245, 60 ,40);
 		gc.fillText("Increases Firepower", SceneManager.SCENE_WIDTH * 0.3, SceneManager.SCENE_HEIGHT * 1 / 9 + 270);
 		
-		gc.drawImage(RenderableHolder.shieldmax, SceneManager.SCENE_WIDTH/7, SceneManager.SCENE_HEIGHT * 1 / 9 + 295, 40 ,40);
-		gc.fillText("Increases Maximum Shield", SceneManager.SCENE_WIDTH * 0.3, SceneManager.SCENE_HEIGHT * 1 / 9 + 320);
+		gc.drawImage(RenderableHolder.shieldmaxCat, SceneManager.SCENE_WIDTH/7, SceneManager.SCENE_HEIGHT * 1 / 9 + 295, 60 ,40);
+		gc.fillText("Maximum The Shield", SceneManager.SCENE_WIDTH * 0.3, SceneManager.SCENE_HEIGHT * 1 / 9 + 320);
 
-		gc.drawImage(RenderableHolder.shieldregen, SceneManager.SCENE_WIDTH/7, SceneManager.SCENE_HEIGHT * 1 / 9 + 350, 40 ,40);
+		gc.drawImage(RenderableHolder.shieldregenBall, SceneManager.SCENE_WIDTH/7, SceneManager.SCENE_HEIGHT * 1 / 9 + 350, 60 ,60);
 		gc.fillText("Increases Shield Regeneration Rate", SceneManager.SCENE_WIDTH * 0.3, SceneManager.SCENE_HEIGHT * 1 / 9 + 370);
-		gc.fillText("And Reduces Shield Cooldown", SceneManager.SCENE_WIDTH * 0.3, SceneManager.SCENE_HEIGHT * 1 / 9 + 395);
+		gc.fillText("and Reduces Shield Cooldown", SceneManager.SCENE_WIDTH * 0.3, SceneManager.SCENE_HEIGHT * 1 / 9 + 395);
 		
-		gc.drawImage(RenderableHolder.powerattackBox, SceneManager.SCENE_WIDTH/7 + 3, SceneManager.SCENE_HEIGHT * 1 / 9 + 420, 36, 36);
+		gc.drawImage(RenderableHolder.powerattackCat, SceneManager.SCENE_WIDTH/7 + 3, SceneManager.SCENE_HEIGHT * 1 / 9 + 420, 60, 40);
 		gc.fillText("Charges Power Attack  (Max : 3 )", SceneManager.SCENE_WIDTH * 0.3, SceneManager.SCENE_HEIGHT * 1 / 9 + 445);
 		
-		gc.drawImage(RenderableHolder.triplefirebox, SceneManager.SCENE_WIDTH/7 + 3, SceneManager.SCENE_HEIGHT * 1 / 9 + 470, 36, 36);
-		gc.fillText("Triple The Fun", SceneManager.SCENE_WIDTH * 0.3, SceneManager.SCENE_HEIGHT * 1 / 9 + 495);
+		gc.drawImage(RenderableHolder.triplefireCat, SceneManager.SCENE_WIDTH/7 + 3, SceneManager.SCENE_HEIGHT * 1 / 9 + 470, 60, 40);
+		gc.fillText("Triple The Bullet", SceneManager.SCENE_WIDTH * 0.3, SceneManager.SCENE_HEIGHT * 1 / 9 + 495);
 		
-		gc.drawImage(RenderableHolder.healthpack, SceneManager.SCENE_WIDTH/7 + 5, SceneManager.SCENE_HEIGHT * 1 / 9 + 517, 32, 38);
+		gc.drawImage(RenderableHolder.healthpack, SceneManager.SCENE_WIDTH/7 + 15, SceneManager.SCENE_HEIGHT * 1 / 9 + 525, 40, 40);
 		gc.fillText("Increases Health", SceneManager.SCENE_WIDTH * 0.3, SceneManager.SCENE_HEIGHT * 1 / 9 + 545);
 		
 	}

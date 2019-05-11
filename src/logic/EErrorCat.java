@@ -13,7 +13,7 @@ import javafx.scene.shape.Shape;
 import sharedObject.RenderableHolder;
 import window.SceneManager;
 
-public class ESemiBoss extends Enemy {
+public class EErrorCat extends Enemy {
 	private int originalHp;
 	private int bulletDelayTick = 0;
 	private double yOffset;
@@ -25,11 +25,11 @@ public class ESemiBoss extends Enemy {
 	private GameLogic gameLogic;
 	private long chargeDelay;
 
-	public ESemiBoss(GameLogic gameLogic) {
+	public EErrorCat(GameLogic gameLogic) {
 		super(5000, 0.15);
 		this.originalHp = 5000;
-		this.width = RenderableHolder.eSemiBoss.getWidth();
-		this.height = RenderableHolder.eSemiBoss.getHeight();
+		this.width = RenderableHolder.eErrorCat.getWidth();
+		this.height = RenderableHolder.eErrorCat.getHeight();
 		this.yOffset = 0;
 		this.xOffset = 0;
 		this.yMultiplier = 0.7;
@@ -106,7 +106,7 @@ public class ESemiBoss extends Enemy {
 	@Override
 	public void draw(GraphicsContext gc) {
 		// TODO Auto-generated method stub
-		gc.drawImage(RenderableHolder.eSemiBoss, x, y);
+		gc.drawImage(RenderableHolder.eErrorCat, x, y);
 		drawHpBar(gc);
 		if (collided) {
 			Image spark = RenderableHolder.sparkArr[ThreadLocalRandom.current().nextInt(0, 4)];

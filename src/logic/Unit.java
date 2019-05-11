@@ -12,7 +12,7 @@ public abstract class Unit implements IRenderable {
 		visible = true;
 		destroyed = false;
 		this.hp = 100;
-		this.speed = 20;
+		this.speed = 1000;
 
 	}
 

@@ -17,10 +17,9 @@ public class RenderableHolder {
 	private List<IRenderable> entities;
 	private Comparator<IRenderable> comparator;
 
-	public static Image ship, eSemiBoss, eBoss, eScout, eUFO, eHeavy, eCat, bullet, background, backgroundMM,
-			backgroundW, healthpack, bossBullet, bossPower, bossLow, roundBulletB, roundBulletY, roundBulletR,
-			roundBulletP, beamSmallG, catBullet, sparkArr[], powerAttack, exploArr[], shieldmax, shieldregen,
-			attackBox, triplefirebox, powerattackBox, coin, gem;
+	public static Image ship, eErrorCat, eBoss, eUFO, eBatEye, eFlyingEye, eCat, bullet, background, backgroundMM,
+			backgroundW, healthpack, bossBullet, bossPower, bossLow, roundBulletR, errorCatBullet, BatBullet, beamSmallG, catBullet, sparkArr[], powerAttack, exploArr[], shieldmaxCat, shieldregenBall,
+			attackCat, triplefireCat, powerattackCat, coin, gem;
 
 	public static Font inGameFont, inGameFontSmall, titleFont, menuFont, tutorialFont;
 
@@ -48,12 +47,12 @@ public class RenderableHolder {
 
 		ship = imageLoader("player/Balloon.png");
 
-		eSemiBoss = imageLoader("enemy/semiboss.gif");
+		eErrorCat = imageLoader("enemy/ErrorCat220.gif");
 		eBoss = imageLoader("enemy/Duck.gif");
-		eScout = imageLoader("enemy/Extra.gif");
-		eCat = imageLoader("enemy/Cat3.gif");
 		eUFO = imageLoader("enemy/P_UFO175.gif");
-		eHeavy = imageLoader("enemy/Heavy.gif");
+		eCat = imageLoader("enemy/Cat3.gif");
+		eBatEye= imageLoader("enemy/BatEye.gif");
+		eFlyingEye = imageLoader("enemy/halloween.gif");
 
 		exploArr = new Image[12];
 		for (int i = 0; i < 12; i++) {
@@ -65,16 +64,15 @@ public class RenderableHolder {
 			sparkArr[i] = imageLoader("spark/" + i + ".png");
 		}
 
-		bullet = imageLoader("bullet/Laser.png");
+		bullet = imageLoader("bullet/BalloonBullet.gif");
 		powerAttack = imageLoader("bullet/fireball.gif");
-		bossBullet = imageLoader("bullet/bossBullet.gif");
+		bossBullet = imageLoader("bullet/BossBullet1.gif");
 		bossPower = imageLoader("bullet/bossPower.png");
 		bossLow = imageLoader("bullet/bossLow.png");
 
-		roundBulletB = imageLoader("bullet/roundBulletB.png");
-		roundBulletY = imageLoader("bullet/roundBulletY.png");
 		roundBulletR = imageLoader("bullet/roundBulletR.png");
-		roundBulletP = imageLoader("bullet/roundBulletP.png");
+		errorCatBullet = imageLoader("bullet/errorbullet.gif");
+		BatBullet = imageLoader("bullet/BatBullet.png");
 		beamSmallG = imageLoader("bullet/beamSmallG.png");
 		catBullet = imageLoader("bullet/CatBullet3.png");
 
@@ -82,12 +80,12 @@ public class RenderableHolder {
 		backgroundMM = imageLoader("background/SkyWide.jpg");
 		backgroundW = imageLoader("background/SkyWide.jpg");
 
-		attackBox = imageLoader("items/attackbox.gif");
-		triplefirebox = imageLoader("items/Triple2.gif");
-		powerattackBox = imageLoader("items/PowerAttack2.gif");
-		healthpack = imageLoader("items/Heart.gif");
-		shieldmax = imageLoader("items/shieldmax.gif");
-		shieldregen = imageLoader("items/Pokeball2.gif");
+		attackCat = imageLoader("items/UpBulletCat90.gif");
+		triplefireCat = imageLoader("items/Triple2.gif");
+		powerattackCat = imageLoader("items/MadCat90.gif");
+		healthpack = imageLoader("items/Heart50.png");
+		shieldmaxCat = imageLoader("items/StrongCat90.gif");
+		shieldregenBall = imageLoader("items/Pokeball2.gif");
 
 		bgm = mediaPlayerLoader("song/megalovania_intro.mp3");
 		fireBall = audioClipLoader("song/Fire_Ball.mp3");

@@ -48,19 +48,19 @@ public class Bullet extends Unit {
 			bulletSprite = RenderableHolder.bossBullet;
 			this.collideDamage = 70 + Distance.distance/20000;
 		} else if (type == 2) {
-			this.height = RenderableHolder.roundBulletB.getHeight();
-			this.width = RenderableHolder.roundBulletB.getWidth();
-			bulletSprite = RenderableHolder.roundBulletB;
-			this.collideDamage = 25;
-		} else if (type == 3) {
-			this.height = RenderableHolder.roundBulletY.getHeight();
-			this.width = RenderableHolder.roundBulletY.getWidth();
-			bulletSprite = RenderableHolder.roundBulletY;
-			this.collideDamage = 20;
-		} else if (type == 4) {
 			this.height = RenderableHolder.roundBulletR.getHeight();
 			this.width = RenderableHolder.roundBulletR.getWidth();
 			bulletSprite = RenderableHolder.roundBulletR;
+			this.collideDamage = 25;
+		}else if (type == 3) {
+			this.height = RenderableHolder.BatBullet.getHeight();
+			this.width = RenderableHolder.BatBullet.getWidth();
+			bulletSprite = RenderableHolder.BatBullet;
+			this.collideDamage = 20;
+		} else if (type == 4) {
+			this.height = RenderableHolder.errorCatBullet.getHeight();
+			this.width = RenderableHolder.errorCatBullet.getWidth();
+			bulletSprite = RenderableHolder.errorCatBullet;
 			this.collideDamage = 30 + Distance.distance/1200;
 		} else if (type == 5) {
 			this.height = RenderableHolder.catBullet.getHeight();

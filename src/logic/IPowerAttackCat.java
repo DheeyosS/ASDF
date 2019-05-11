@@ -5,12 +5,12 @@ import java.util.concurrent.ThreadLocalRandom;
 import javafx.scene.canvas.GraphicsContext;
 import sharedObject.RenderableHolder;
 
-public class IAttackBox extends Items {
-	
-	public IAttackBox(double x) {
-		super(3);
-		this.width = RenderableHolder.attackBox.getWidth();
-		this.height = RenderableHolder.attackBox.getHeight();
+public class IPowerAttackCat extends Items {
+
+	public IPowerAttackCat(double x) {
+		super(ThreadLocalRandom.current().nextDouble(3, 6));
+		this.width = RenderableHolder.powerattackCat.getWidth();
+		this.height = RenderableHolder.powerattackCat.getHeight();
 		this.visible = true;
 		this.destroyed = false;
 		this.x = x;
@@ -21,15 +21,15 @@ public class IAttackBox extends Items {
 	@Override
 	public void draw(GraphicsContext gc) {
 		// TODO Auto-generated method stub
-		gc.drawImage(RenderableHolder.attackBox, x, y);
+		gc.drawImage(RenderableHolder.powerattackCat, x, y);
 	}
 
 	@Override
-	public void onCollision(Unit other) {
+	public void onCollision(Unit others) {
 		// TODO Auto-generated method stub
 		this.hp = 0;
 		this.destroyed = true;
 		this.visible = false;
 	}
-	
+
 }
