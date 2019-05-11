@@ -63,9 +63,9 @@ public class Bullet extends Unit {
 			bulletSprite = RenderableHolder.roundBulletR;
 			this.collideDamage = 30 + Distance.distance/1200;
 		} else if (type == 5) {
-			this.height = RenderableHolder.beamSmallY.getHeight();
-			this.width = RenderableHolder.beamSmallY.getWidth();
-			bulletSprite = RenderableHolder.beamSmallY;
+			this.height = RenderableHolder.catBullet.getHeight();
+			this.width = RenderableHolder.catBullet.getWidth();
+			bulletSprite = RenderableHolder.catBullet;
 			this.collideDamage = 25;
 		} else if (type == 6) {
 			this.height = RenderableHolder.powerAttack.getHeight();

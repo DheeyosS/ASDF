@@ -202,12 +202,12 @@ public class GameLogic {
 		if (GameLogic.currentEnemyWeight < this.maxEnemyCap) {
 			int chance = r.nextInt(100) - 10000 / (Distance.distance + 1);
 			if (chance < 60) {
-				ELight elight = new ELight(this, ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eLight.getWidth()));
+				ECat elight = new ECat(this, ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eCat.getWidth()));
 				addNewObject(elight);
 			} else if (chance < 75) {
-				EJet ejet = new EJet(this, ThreadLocalRandom.current()
-						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eJet.getWidth()));
+				EUFO ejet = new EUFO(this, ThreadLocalRandom.current()
+						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eUFO.getWidth()));
 				addNewObject(ejet);
 			} else if (chance < 90) {
 				EScout escout = new EScout(this, ThreadLocalRandom.current()

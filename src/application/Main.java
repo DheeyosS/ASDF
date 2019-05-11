@@ -16,8 +16,8 @@ public class Main extends Application {
 			RenderableHolder.loadResource();
 			SceneManager.initialize(primaryStage);
 			SceneManager.gotoMainMenu();
-			primaryStage.getIcons().add(new Image("Icon/Ship50.gif"));
-			primaryStage.setTitle("Dank Dream");
+			primaryStage.getIcons().add(new Image("Icon/Balloon.png"));
+			primaryStage.setTitle("Ballooney");
 			primaryStage.setAlwaysOnTop(true);
 			primaryStage.centerOnScreen();
 			primaryStage.setResizable(false);

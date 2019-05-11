@@ -9,17 +9,17 @@ import javafx.scene.shape.Shape;
 import sharedObject.RenderableHolder;
 import window.SceneManager;
 
-public class ELight extends Enemy {
+public class ECat extends Enemy {
 
 	private int bulletDelayTick = 0;
 	private GameLogic gameLogic;
 	private double startingX;
 
-	public ELight(GameLogic gameLogic, double x) {
+	public ECat(GameLogic gameLogic, double x) {
 		super(150, 2.5);
 		// TODO Auto-generated constructor stub
-		this.width = RenderableHolder.eLight.getWidth();
-		this.height = RenderableHolder.eLight.getHeight();
+		this.width = RenderableHolder.eCat.getWidth();
+		this.height = RenderableHolder.eCat.getHeight();
 		this.visible = true;
 		this.destroyed = false;
 		this.x = x;
@@ -33,7 +33,7 @@ public class ELight extends Enemy {
 	@Override
 	public void draw(GraphicsContext gc) {
 		// TODO Auto-generated method stub
-		gc.drawImage(RenderableHolder.eLight, x, y);
+		gc.drawImage(RenderableHolder.eCat, x, y);
 		if(collided) {
 			Image spark = RenderableHolder.sparkArr[ThreadLocalRandom.current().nextInt(0,4)];
 			gc.drawImage(spark, x + 5, y, this.width * 0.85, this.height * 0.85);

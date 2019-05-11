@@ -17,9 +17,9 @@ public class RenderableHolder {
 	private List<IRenderable> entities;
 	private Comparator<IRenderable> comparator;
 
-	public static Image ship, eSemiBoss, eBoss, eScout, eJet, eHeavy, eLight, bullet, background, backgroundMM,
+	public static Image ship, eSemiBoss, eBoss, eScout, eUFO, eHeavy, eCat, bullet, background, backgroundMM,
 			backgroundW, healthpack, bossBullet, bossPower, bossLow, roundBulletB, roundBulletY, roundBulletR,
-			roundBulletP, beamSmallG, beamSmallY, sparkArr[], powerAttack, exploArr[], shieldmax, shieldregen,
+			roundBulletP, beamSmallG, catBullet, sparkArr[], powerAttack, exploArr[], shieldmax, shieldregen,
 			attackBox, triplefirebox, powerattackBox, coin, gem;
 
 	public static Font inGameFont, inGameFontSmall, titleFont, menuFont, tutorialFont;
@@ -51,8 +51,8 @@ public class RenderableHolder {
 		eSemiBoss = imageLoader("enemy/semiboss.gif");
 		eBoss = imageLoader("enemy/Duck.gif");
 		eScout = imageLoader("enemy/Extra.gif");
-		eLight = imageLoader("enemy/Cat3.gif");
-		eJet = imageLoader("enemy/Bananaa.gif");
+		eCat = imageLoader("enemy/Cat3.gif");
+		eUFO = imageLoader("enemy/P_UFO175.gif");
 		eHeavy = imageLoader("enemy/Heavy.gif");
 
 		exploArr = new Image[12];
@@ -76,7 +76,7 @@ public class RenderableHolder {
 		roundBulletR = imageLoader("bullet/roundBulletR.png");
 		roundBulletP = imageLoader("bullet/roundBulletP.png");
 		beamSmallG = imageLoader("bullet/beamSmallG.png");
-		beamSmallY = imageLoader("bullet/beamSmallY.png");
+		catBullet = imageLoader("bullet/CatBullet3.png");
 
 		background = imageLoader("background/SkyWide.jpg");
 		backgroundMM = imageLoader("background/SkyWide.jpg");
@@ -85,9 +85,9 @@ public class RenderableHolder {
 		attackBox = imageLoader("items/attackbox.gif");
 		triplefirebox = imageLoader("items/Triple2.gif");
 		powerattackBox = imageLoader("items/PowerAttack2.gif");
-		healthpack = imageLoader("items/health.png");
+		healthpack = imageLoader("items/Heart.gif");
 		shieldmax = imageLoader("items/shieldmax.gif");
-		shieldregen = imageLoader("items/shieldregen.gif");
+		shieldregen = imageLoader("items/Pokeball2.gif");
 
 		bgm = mediaPlayerLoader("song/megalovania_intro.mp3");
 		fireBall = audioClipLoader("song/Fire_Ball.mp3");
@@ -102,7 +102,7 @@ public class RenderableHolder {
 		powerAttackLaunch = audioClipLoader("song/PowerAttack.mp3");
 
 		fireBall.setVolume(0.35);
-		laser.setVolume(0.2);
+		laser.setVolume(0.1);
 		hit.setVolume(0.12);
 		hit2.setVolume(0.08);
 		explosion.setVolume(0.25);
