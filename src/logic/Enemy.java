@@ -35,7 +35,7 @@ public abstract class Enemy extends Unit {
 			if (!this.destroyed) {
 				GameLogic.currentEnemyWeight -= this.getWeight();
 				if(this instanceof EErrorCat) {
-					GameLogic.killedSemi = true;
+					GameLogic.killedErrorCat = true;
 				}
 				else if(this instanceof EBoss) {
 					GameLogic.killedBoss = true;

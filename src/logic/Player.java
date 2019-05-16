@@ -41,7 +41,7 @@ public class Player extends Unit implements IRenderable {
 	
 	public Player(GameLogic gameLogic) {
 		// TODO Auto-generated constructor stub
-		super(2500, 6);
+		super(2500, 8.5);
 		this.maxHp = this.hp;
 		maxShield = 1200;
 		shield = maxShield;

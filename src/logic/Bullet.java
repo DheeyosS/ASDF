@@ -46,32 +46,32 @@ public class Bullet extends Unit {
 			this.height = RenderableHolder.bossBullet.getHeight();
 			this.width = RenderableHolder.bossBullet.getWidth();
 			bulletSprite = RenderableHolder.bossBullet;
-			this.collideDamage = 70 + Distance.distance/20000;
+			this.collideDamage = 200 + Distance.distance/20000;
 		} else if (type == 2) {
 			this.height = RenderableHolder.roundBulletR.getHeight();
 			this.width = RenderableHolder.roundBulletR.getWidth();
 			bulletSprite = RenderableHolder.roundBulletR;
-			this.collideDamage = 25;
+			this.collideDamage = 50;
 		}else if (type == 3) {
 			this.height = RenderableHolder.BatBullet.getHeight();
 			this.width = RenderableHolder.BatBullet.getWidth();
 			bulletSprite = RenderableHolder.BatBullet;
-			this.collideDamage = 20;
+			this.collideDamage = 50;
 		} else if (type == 4) {
 			this.height = RenderableHolder.errorCatBullet.getHeight();
 			this.width = RenderableHolder.errorCatBullet.getWidth();
 			bulletSprite = RenderableHolder.errorCatBullet;
-			this.collideDamage = 30 + Distance.distance/1200;
+			this.collideDamage = 50 + Distance.distance/1200;
 		} else if (type == 5) {
 			this.height = RenderableHolder.catBullet.getHeight();
 			this.width = RenderableHolder.catBullet.getWidth();
 			bulletSprite = RenderableHolder.catBullet;
-			this.collideDamage = 25;
+			this.collideDamage = 50;
 		} else if (type == 6) {
 			this.height = RenderableHolder.powerAttack.getHeight();
 			this.width = RenderableHolder.powerAttack.getWidth();
 			bulletSprite = RenderableHolder.powerAttack;
-			this.collideDamage = 20;
+			this.collideDamage = 50;
 		} else if (type == 8) {
 			this.height = RenderableHolder.bossPower.getHeight();
 			this.width = RenderableHolder.bossPower.getWidth();
@@ -81,12 +81,12 @@ public class Bullet extends Unit {
 			this.height = RenderableHolder.bossLow.getHeight();
 			this.width = RenderableHolder.bossLow.getWidth();
 			bulletSprite = RenderableHolder.bossLow;
-			this.collideDamage = 10 + Distance.distance/35000;
+			this.collideDamage = 30 + Distance.distance/35000;
 		} else if (type == 10) {
 			this.height = RenderableHolder.beamSmallG.getHeight();
 			this.width = RenderableHolder.beamSmallG.getWidth();
 			bulletSprite = RenderableHolder.beamSmallG;
-			this.collideDamage = 20;
+			this.collideDamage = 50;
 		}
 		if (side == 1) {
 			this.x = x + (e.width - this.width) / 2.0;

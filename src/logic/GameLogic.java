@@ -28,7 +28,7 @@ public class GameLogic {
 	public static boolean isBossAlive;
 	public static boolean isSemiAlive;
 	public static boolean killedBoss;
-	public static boolean killedSemi;
+	public static boolean killedErrorCat;
 	private int stageLevel;
 
 	private long nextItemsSpawnTime;
@@ -39,7 +39,7 @@ public class GameLogic {
 
 	private Player player;
 	private EErrorCat eErrorCat;
-	private EBoss eboss;
+	private EBoss eBoss;
 
 	public GameLogic(GameScreen canvas) {
 		this.gameObjectContainer = new ArrayList<Unit>();
@@ -49,7 +49,7 @@ public class GameLogic {
 		GameLogic.isBossAlive = false;
 		GameLogic.isSemiAlive = false;
 		killedBoss = false;
-		killedSemi = false;
+		killedErrorCat = false;
 
 		RenderableHolder.getInstance().add(new Background());
 		RenderableHolder.getInstance().add(new Distance());
@@ -112,7 +112,7 @@ public class GameLogic {
 	private void updateGame() {
 		// TODO fill code
 
-		if (killedSemi) {
+		if (killedErrorCat) {
 			GameLogic.relaxTime = System.nanoTime() + 12000000000l;
 			GameLogic.currentEnemyWeight += 21.6;
 
@@ -124,7 +124,7 @@ public class GameLogic {
 			addNewObject(new IShieldRegenBall(
 					(SceneManager.SCENE_WIDTH - RenderableHolder.shieldregenBall.getWidth()) / 2 + 100));
 
-			killedSemi = false;
+			killedErrorCat = false;
 		}
 
 		if (relaxTime >= System.nanoTime()) {
@@ -190,9 +190,9 @@ public class GameLogic {
 			GameLogic.currentEnemyWeight += eErrorCat.getWeight();
 		}
 		if (Distance.distance >= 50000 && !isBossAlive) {
-			eboss = new EBoss(this);
-			addNewObject(eboss);
-			GameLogic.currentEnemyWeight += eboss.getWeight();
+			eBoss = new EBoss(this);
+			addNewObject(eBoss);
+			GameLogic.currentEnemyWeight += eBoss.getWeight();
 		}
 
 		if (Distance.distance >= 800 * stageLevel * stageLevel) {
@@ -202,21 +202,21 @@ public class GameLogic {
 		if (GameLogic.currentEnemyWeight < this.maxEnemyCap) {
 			int chance = r.nextInt(100) - 10000 / (Distance.distance + 1);
 			if (chance < 60) {
-				ECat elight = new ECat(this, ThreadLocalRandom.current()
+				ECat eCat = new ECat(this, ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eCat.getWidth()));
-				addNewObject(elight);
+				addNewObject(eCat);
 			} else if (chance < 75) {
-				EBatEye ejet = new EBatEye(this, ThreadLocalRandom.current()
+				EBatEye eBatEye = new EBatEye(this, ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eBatEye.getWidth()));
-				addNewObject(ejet);
+				addNewObject(eBatEye);
 			} else if (chance < 90) {
-				EUFO escout = new EUFO(this, ThreadLocalRandom.current()
+				EUFO eUFO = new EUFO(this, ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eUFO.getWidth()));
-				addNewObject(escout);
+				addNewObject(eUFO);
 			} else {
-				EFlyingEye eheavy = new EFlyingEye(this, ThreadLocalRandom.current()
+				EFlyingEye eFlyingEye = new EFlyingEye(this, ThreadLocalRandom.current()
 						.nextDouble(SceneManager.SCENE_WIDTH - RenderableHolder.eFlyingEye.getWidth()));
-				addNewObject(eheavy);
+				addNewObject(eFlyingEye);
 			}
 
 		}

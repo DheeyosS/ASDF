@@ -16,7 +16,7 @@ public class ECat extends Enemy {
 	private double startingX;
 
 	public ECat(GameLogic gameLogic, double x) {
-		super(150, 2.5);
+		super(100, 2.5);
 		// TODO Auto-generated constructor stub
 		this.width = RenderableHolder.eCat.getWidth();
 		this.height = RenderableHolder.eCat.getHeight();

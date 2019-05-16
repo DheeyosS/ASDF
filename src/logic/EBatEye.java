@@ -17,7 +17,7 @@ public class EBatEye extends Enemy {
 	private boolean inPosition;
 
 	public EBatEye(GameLogic gameLogic, double x) {
-		super(100, 0.3);
+		super(150, 0.3);
 		this.width = RenderableHolder.eBatEye.getWidth();
 		this.height = RenderableHolder.eBatEye.getHeight();
 		this.visible = true;

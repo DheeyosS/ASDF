@@ -70,8 +70,8 @@ public class RenderableHolder {
 		bossPower = imageLoader("bullet/bossPower.png");
 		bossLow = imageLoader("bullet/bossLow.png");
 
-		roundBulletR = imageLoader("bullet/roundBulletR.png");
-		errorCatBullet = imageLoader("bullet/errorbullet.gif");
+		roundBulletR = imageLoader("bullet/PBullet.gif");
+		errorCatBullet = imageLoader("bullet/ErrorBullet2.gif");
 		BatBullet = imageLoader("bullet/BatBullet.png");
 		beamSmallG = imageLoader("bullet/beamSmallG.png");
 		catBullet = imageLoader("bullet/CatBullet3.png");
@@ -94,7 +94,7 @@ public class RenderableHolder {
 		hit2 = audioClipLoader("song/hit2.wav");
 		gameWinnerMusic = mediaPlayerLoader("song/GameWinner.mp3");
 		gameOverMusic = mediaPlayerLoader("song/GameLoser.mp3");
-		mainMenuMusic = mediaPlayerLoader("song/Newdawn.mp3");
+		mainMenuMusic = mediaPlayerLoader("song/NewHope.mp3");
 		explosion = audioClipLoader("song/Explosion.wav");
 		explosion2 = audioClipLoader("song/Explosion2.wav");
 		powerAttackLaunch = audioClipLoader("song/PowerAttack.mp3");

@@ -133,7 +133,7 @@ public class EErrorCat extends Enemy {
 				true, // proportional
 				CycleMethod.REFLECT, // cycle colors
 				// stops
-				new Stop(0.1f, Color.rgb(255, 30, 30, 0.3)), new Stop(1.0f, Color.rgb(255, 150, 150, 0.3)));
+				new Stop(0.1f, Color.rgb(30, 30, 255, 0.5)), new Stop(1.0f, Color.rgb(150, 150, 255, 0.5)));
 		gc.setFill(linearGrad);
 
 		gc.fillRect(this.xOffset, 0, this.width, SceneManager.SCENE_HEIGHT * 2);
